@@ -22,5 +22,5 @@ alias cddev='cd ${DEV_PATH}'
 alias ll='ls -latr'
 
 function cod() {
-	code $1 &>/dev/null &>/dev/null &
+	code $1 &>/dev/null &
 }
