@@ -1,0 +1,26 @@
+if [ -n "$BASH_VERSION" ]; then     
+	# include .bashrc if it exists
+	if [ -f "$HOME/.bashrc" ]; then
+        	. "$HOME/.bashrc"
+   	fi
+fi
+
+clear
+echo "Bash profile loaded"
+
+alias reload='source ~/.bash_profile'
+export GOPATH=/mnt/d/Go
+export PATH=$PATH:$GOPATH
+export SRC_PATH=$GOPATH/src
+export GIT_PATH=$SRC_PATH/github.com
+export DEV_PATH=$GIT_PATH/sgoodrow
+alias cdgo='cd ${GO_PATH}'
+alias cdsrc='cd ${SRC_PATH}'
+alias cdgit='cd ${GIT_PATH}'
+alias cddev='cd ${DEV_PATH}'
+
+alias ll='ls -latr'
+
+function cod() {
+	code $1 &>/dev/null
+}
