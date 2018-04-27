@@ -10,7 +10,8 @@ echo "Bash profile loaded"
 
 alias reload='source ~/.bash_profile'
 export GOPATH=/mnt/d/Go
-export PATH=$PATH:$GOPATH
+export GOROOT=/usr/bin
+export PATH=$PATH:$GOPATH:$GOROOT
 export SRC_PATH=$GOPATH/src
 export GIT_PATH=$SRC_PATH/github.com
 export DEV_PATH=$GIT_PATH/sgoodrow
