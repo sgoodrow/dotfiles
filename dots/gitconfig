@@ -18,7 +18,7 @@
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 [core]
 	editor = vim
-	autocrlf = true
+	autocrlf = false
 	excludesfile = ~/.gitignore_global
 [color]
 	ui = auto
