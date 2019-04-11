@@ -1,8 +1,17 @@
 #!/bin/bash
-DIR=$PWD
-cd ~
-for i in $( ls $DIR/dots ); do
-    ln -sf $DIR/dots/$i .$i
-    echo "Created symlink ${PWD}/.${i} -> ${DIR}/dots/${i}"
+
+BASEDIR=$PWD
+
+function symlink() {
+	ln -sf ${PWD}/${1} ~/.${1}
+}
+
+cd $BASEDIR/src
+for i in $( ls $PWD ); do
+    symlink $i
 done
-cd -
+
+git submodule init
+git submodule update
+cd $BASEDIR/gitalias
+symlink gitalias.txt

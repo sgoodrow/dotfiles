@@ -1,0 +1,7 @@
+[user]
+	email = sgoodrow@gmail.com
+	name = Scott Goodrow
+[core]
+	editor = vim
+[include]
+	path = /home/scott/.gitalias.txt

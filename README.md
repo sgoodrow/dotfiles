@@ -1,3 +1,2 @@
 # dotfiles
-### Install
-Run `. install.sh` to create symlinks
+To install or update, simply run `./install.sh`.
