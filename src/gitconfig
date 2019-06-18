@@ -4,4 +4,4 @@
 [core]
 	editor = vim
 [include]
-	path = /home/scott/.gitalias.txt
+	path = ~/.gitalias.txt
