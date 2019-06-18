@@ -12,7 +12,14 @@ function reload() {
 export GIT_PATH=~/projects/github
 export DEV_PATH=$GIT_PATH/sgoodrow
 
+# load z
+. ${DEV_PATH}/dotfiles/z/z.sh
+
 alias cdgit='cd ${GIT_PATH}'
 alias cddev='cd ${DEV_PATH}'
+
+function docker_clean() {
+	docker system prune --volumes
+}
 
 clear
