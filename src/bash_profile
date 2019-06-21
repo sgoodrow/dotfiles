@@ -5,21 +5,40 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-function reload() {
-	source ~/.bash_profile
-}
+# function definitions, see ~/.bash_functions
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
+fi
 
+# alias definitions, see ~/.bash_aliases
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# exports
 export GIT_PATH=~/projects/github
 export DEV_PATH=$GIT_PATH/sgoodrow
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
 
-# load z
+# z
 . ${DEV_PATH}/dotfiles/z/z.sh
 
-alias cdgit='cd ${GIT_PATH}'
-alias cddev='cd ${DEV_PATH}'
+# maven bash completion
+. ~/.maven_bash_completion.bash
 
-function docker_clean() {
-	docker system prune --volumes
+# more bash completion
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion || {
+    # if not found in /usr/local/etc, try the brew --prefix location
+    [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ] && \
+        . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
 }
+
+# prompt
+DIM='\e[2m'
+RESET='\e[0m'
+export PS1="${DIM}\u@\W${RESET} "
+
+# title
+export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"; '
 
 clear

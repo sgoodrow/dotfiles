@@ -1,3 +1,9 @@
 [submodule "gitalias"]
 	path = gitalias
 	url = https://github.com/GitAlias/gitalias.git
+[submodule "maven-bash-completion"]
+	path = maven-bash-completion
+	url = https://github.com/juven/maven-bash-completion
+[submodule "z"]
+	path = z
+	url = https://github.com/rupa/z
