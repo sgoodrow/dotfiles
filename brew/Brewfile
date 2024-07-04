@@ -1,0 +1,7 @@
+tap "homebrew/bundle"
+brew "gh"
+brew "zsh"
+cask "docker"
+cask "google-chrome"
+cask "rectangle"
+cask "visual-studio-code"
