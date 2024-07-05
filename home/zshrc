@@ -72,6 +72,9 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git docker docker-compose nvm yarn z)
 
+# Add NVM support.
+export NVM_DIR="$HOME/.nvm"
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
