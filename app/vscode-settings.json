@@ -4,5 +4,7 @@
   "codeium.enableConfig": {
     "*": true,
     "prisma": true
-  }
+  },
+  "editor.inlineSuggest.suppressSuggestions": true,
+  "typescript.tsserver.log": "off"
 }
