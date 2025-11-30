@@ -6,5 +6,7 @@
     "prisma": true
   },
   "editor.inlineSuggest.suppressSuggestions": true,
-  "typescript.tsserver.log": "off"
+  "typescript.tsserver.log": "off",
+  "workbench.startupEditor": "none",
+  "javascript.updateImportsOnFileMove.enabled": "always"
 }

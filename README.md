@@ -17,3 +17,13 @@ To add a new configuration file, move it to the `~/dotfiles/home` directory and 
 ## Updating Dotfiles
 
 Simply git add and commit. The dotfiles are symlinked from the repository, so any changes to the installed dotfiles will be reflected in the repository and be ready for staging.
+
+### Updating the Brewfile
+
+After installing new Homebrew packages, casks, or VS Code extensions, update the `Brewfile` and `Brewfile.lock.json` by running:
+
+```sh
+./update-brewfile.sh
+```
+
+This will sync both files with your currently installed packages.

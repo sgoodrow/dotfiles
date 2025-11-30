@@ -49,7 +49,7 @@ create_symlink "$VS_SETTINGS" "$VS_SETTINGS_DEST"
 
 # Function to install cron job for updating Brewfile
 install_cron_job() {
-    local SCRIPT_PATH="$DOTFILES_DIR/bin/update_brewfile.sh"
+    local SCRIPT_PATH="$DOTFILES_DIR/update-brewfile.sh"
     local CRON_COMMAND="0 0 * * * /bin/bash $SCRIPT_PATH"
 
     # Add the cron job
